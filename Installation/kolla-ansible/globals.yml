@@ -1,0 +1,31 @@
+kolla_base_distro: "ubuntu"
+kolla_install_type: "binary"
+openstack_release: "2025.1"
+
+########################
+# Réseaux
+########################
+# Interface management (Host-Only 192.168.56.10 par ex.)
+network_interface: "eth1"
+
+# Interface provider (Host-Only 192.168.57.10 par ex.)
+neutron_external_interface: "eth2"
+
+# VIP interne utilisé par HAProxy
+kolla_internal_vip_address: "192.168.56.254"
+
+########################
+# Services à activer
+########################
+enable_horizon: "yes"
+enable_neutron: "yes"
+enable_nova: "yes"
+enable_cinder: "yes"
+enable_heat: "yes"
+enable_swift: "yes"
+
+########################
+# Swift (Object Storage)
+########################
+swift_devices: "{{ node_config_directory }}/swift/devices"
+swift_mount_check: false

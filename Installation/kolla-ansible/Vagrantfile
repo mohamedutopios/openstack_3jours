@@ -1,0 +1,20 @@
+Vagrant.configure("2") do |config|
+    config.vm.box = "bento/ubuntu-24.04"
+    config.vm.hostname = "openstack-aio"
+  
+    # Interface management (API, Horizon, SSH)
+    config.vm.network "private_network", ip: "192.168.56.10"
+  
+    # Interface provider (Floating IPs OpenStack)
+    config.vm.network "private_network", ip: "192.168.57.10"
+  
+    config.vm.provider "virtualbox" do |vb|
+      vb.name = "OpenStack-AIO2"
+      vb.memory = 10000
+      vb.cpus = 3
+    end
+  
+    # Provision de base
+    config.vm.provision "shell", path: "provision.sh"
+  end
+  

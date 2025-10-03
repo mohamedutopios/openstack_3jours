@@ -1,0 +1,1 @@
+cat /etc/kolla/admin-openrc.sh
