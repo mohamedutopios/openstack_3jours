@@ -1,7 +1,3 @@
-Très bonne question 👌 — une fois Nova installé et fonctionnel, **les vraies optimisations** se jouent dans le fichier principal de conf `nova.conf` et quelques fichiers annexes (`api-paste.ini`, `policy.yaml`).
-
-Je vais t’expliquer **quelles modifications pertinentes** on fait en pratique, en séparant :
-
 1. **Base obligatoire** (pour que ça marche)
 2. **Performance / tuning**
 3. **Fonctionnalités avancées (NUMA, SR-IOV, GPU, quotas, etc.)**
@@ -150,7 +146,3 @@ log_dir = /var/log/nova
   journalctl -u nova-compute -f
   ```
 * Documenter les extra_specs/flavors liés aux changements (`hw:cpu_policy`, `trait:CUSTOM_GPU`, etc.).
-
----
-
-Veux-tu que je te prépare un **exemple `nova.conf` optimisé pour un lab VirtualBox (CPU partagé, disque qcow2 local)** et un **autre optimisé pour une prod Ceph + SR-IOV** pour que tu vois la différence ?

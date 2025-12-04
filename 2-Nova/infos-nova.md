@@ -1,5 +1,3 @@
-Super question 👍 — voici une vue “de bout-en-bout” d’OpenStack Nova, avec l’architecture, le cycle de vie d’une VM, la configuration (fichiers/sections clés), l’ordonnancement (scheduler + Placement), et les options avancées (NUMA, SR-IOV, migrations, etc.). Je te laisse un gabarit `nova.conf` minimal + des check-lists opérateurs.
-
 # 1) Rôle et grands blocs de Nova
 
 Nova est le service Compute d’OpenStack : il expose une API REST, orchestre l’ordonnancement (choix d’un hôte), délègue la création/gestion des machines virtuelles aux nœuds de calcul, et s’appuie sur d’autres services : **Glance** (images), **Neutron** (réseau), **Cinder/Manila** (volumes/fichiers), **Placement** (capacité/traits), **Keystone** (auth). Les composants clés :
@@ -217,19 +215,3 @@ nova-status upgrade check
 * **Configuration & sample `nova.conf`** : guide et référence par sections. ([docs.openstack.org][8])
 * **Release notes 2025.1 (Epoxy)** : nouveautés (SPICE direct consoles, VFIO live-migration, Manila direct attach, OpenAPI schemas, unified limits…). ([docs.openstack.org][12])
 
----
-
-Si tu veux, je peux te générer un **pack d’exemples de flavors/extra_specs** (NUMA, hugepages, GPU, SR-IOV), un `policy.yaml` de départ (RBAC restreint), et un **exemple d’agrégats/AZ** (CPU AMD vs Intel, NVMe vs HDD) adaptés à ton lab VirtualBox/Ubuntu 22.04.
-
-[1]: https://docs.openstack.org/nova/latest/admin/architecture.html?utm_source=chatgpt.com "Nova System Architecture"
-[2]: https://docs.openstack.org/nova/latest/admin/scheduling.html?utm_source=chatgpt.com "Compute schedulers — nova 32.1.0.dev11 documentation"
-[3]: https://docs.openstack.org/nova/latest/install/get-started-compute.html?utm_source=chatgpt.com "Compute service overview — nova 32.1.0.dev11 ..."
-[4]: https://docs.openstack.org/nova/queens/user/placement.html?utm_source=chatgpt.com "OpenStack Docs: Placement API"
-[5]: https://docs.openstack.org/nova/latest/admin/cells.html?utm_source=chatgpt.com "Cells (v2) — nova 32.1.0.dev11 documentation"
-[6]: https://docs.openstack.org/placement/latest/specs/index.html?utm_source=chatgpt.com "Placement Specifications"
-[7]: https://docs.redhat.com/en/documentation/red_hat_openstack_platform/17.1/html/configuring_the_compute_service_for_instance_creation/assembly_configuring-instance-scheduling-and-placement_memory?utm_source=chatgpt.com "Chapter 7. Configuring instance scheduling and placement"
-[8]: https://docs.openstack.org/nova/latest/admin/configuration/index.html?utm_source=chatgpt.com "Configuration — nova 31.1.0.dev372 documentation"
-[9]: https://docs.openstack.org/nova/latest/configuration/index.html?utm_source=chatgpt.com "Configuration Guide - nova 32.1.0.dev11"
-[10]: https://docs.openstack.org/2025.1/?utm_source=chatgpt.com "OpenStack Docs: 2025.1"
-[11]: https://specs.openstack.org/openstack/nova-specs/specs/2025.1/index.html?utm_source=chatgpt.com "Nova 2025.1 Epoxy Specifications"
-[12]: https://docs.openstack.org/releasenotes/nova/2025.1.html?utm_source=chatgpt.com "2025.1 Series Release Notes - nova"

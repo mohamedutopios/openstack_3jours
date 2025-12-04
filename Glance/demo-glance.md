@@ -1,14 +1,3 @@
-Parfait 👍 tu veux une **démo guidée autour de Glance (Image Service d’OpenStack)**, structurée comme un TP, avec :
-
-* La **brique de gestion des images (Glance)**
-* Création de la **base de données**
-* Mise en œuvre et **configuration** (AIO Kolla-Ansible)
-* Gestion du **stockage des images**
-
-Je vais t’écrire ça étape par étape façon démonstration.
-
----
-
 # 🚀 1. Vue d’ensemble : la brique **Glance**
 
 Glance est le service qui gère les **images systèmes** (Ubuntu, CentOS, Cirros, etc.) qu’on utilise pour lancer des VMs dans Nova.
@@ -143,6 +132,4 @@ Si tu avais un cluster Ceph, les images seraient placées dans un **pool RBD** d
 4. **Stockage** : file (local), Swift (object storage), ou Ceph RBD (prod).
 5. **Démos** : upload d’une image, vérification, lancement d’une VM.
 
----
 
-👉 Veux-tu que je te prépare un **TP complet “Gestion des images avec Glance”** (upload Cirros + upload Ubuntu Cloud + lancement d’instances, exploration du backend) pour que tu puisses l’utiliser en démo avec tes apprenants ?

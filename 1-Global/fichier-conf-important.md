@@ -1,8 +1,3 @@
-Parfait 👍 tu es déjà en **Kolla-Ansible**.
-Pour être efficace, je vais te donner une **cartographie claire des fichiers de configuration et autres fichiers importants** à connaître, avec leur rôle exact.
-
----
-
 # 📂 Répertoire Kolla-Ansible
 
 Quand tu installes Kolla-Ansible (via `pip install kolla-ansible` ou dépôt git), les fichiers se trouvent en général sous :
@@ -140,10 +135,3 @@ Exemple **multi-node** :
 | Rôles Ansible (`/usr/local/share/kolla-ansible/ansible/`) | Automatisation et déploiement     | ⭐         |
 
 ---
-
-Veux-tu que je te fasse un **exemple concret** avec :
-
-* un `globals.yml` prêt pour **VirtualBox (all-in-one)**
-* un `multinode` pour **3 VMs (control, network, compute)**
-
-👉 Comme ça tu aurais un modèle clé en main pour ton lab. Veux-tu que je prépare ça ?

@@ -1,9 +1,3 @@
-Parfait 👍 tu veux un **fil conducteur** où on part du plus simple et on construit progressivement en ajoutant des concepts Terraform spécifiques à OpenStack.
-
-Voici une série **cumulative et incrémentale** → chaque étape reprend l’exemple précédent et ajoute un nouveau concept.
-
----
-
 # 🟢 Étape 1 : Créer une VM simple
 
 `main.tf`
@@ -176,19 +170,3 @@ output "vm5_fip" {
 }
 ```
 
-👉 Ici, on fait le lien avec un réseau **déjà existant** (`public`) et on donne une Floating IP à la VM.
-
----
-
-# 📌 Résumé progression cumulative
-
-1. **VM simple**
-2. **Ajout réseau/subnet** et lien avec la VM
-3. **Variables** pour rendre le code flexible
-4. **Outputs** pour récupérer automatiquement des infos
-5. **Locals** pour dériver des noms communs
-6. **Data source** pour réutiliser une ressource existante (ex. réseau externe)
-
----
-
-👉 Veux-tu que je t’emballe ça dans un projet **avec des fichiers séparés** (`step1/`, `step2/`, …) que tu pourrais exécuter séquentiellement pour tester chaque étape ?

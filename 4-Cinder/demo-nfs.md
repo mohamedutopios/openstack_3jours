@@ -1,8 +1,3 @@
-Parfait 👍 tu veux simplifier ton lab en utilisant **Cinder avec un backend NFS** au lieu de LVM+iSCSI.
-C’est une bonne idée en **AIO VirtualBox**, car ça évite les problèmes de modules kernel iSCSI.
-
----
-
 # 🚀 Exemple : Cinder avec backend **NFS**
 
 ## 1. Préparer un répertoire NFS sur ton hôte (Ubuntu)

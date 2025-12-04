@@ -1,14 +1,3 @@
-Très bonne question Mohamed 👍
-Avec **Kolla-Ansible**, tout est piloté par des **playbooks Ansible**. Ce sont eux qui déploient et configurent OpenStack dans des conteneurs Docker.
-
-Je vais t’expliquer :
-
-1. Où ils se trouvent
-2. Leur rôle global
-3. Leur contenu (grandes étapes par playbook)
-
----
-
 # 📂 Emplacement des playbooks Kolla-Ansible
 
 Quand tu installes Kolla-Ansible (via pip), les playbooks se trouvent ici (dans ton venv ou ton système) :
@@ -152,9 +141,3 @@ Chaque rôle est un répertoire avec ses propres **tasks/main.yml**, **templates
 * **post-deploy.yml** → initialise Keystone et le cloud utilisable
 * **destroy.yml** → supprime l’environnement
 * **upgrade.yml / reconfigure.yml / pull.yml** → maintenance
-
-👉 En réalité, **Kolla-Ansible = collection de rôles Ansible**, chacun gérant un service OpenStack dans un conteneur Docker.
-
----
-
-Veux-tu que je t’ouvre un **exemple concret d’un rôle (ex. `roles/nova/tasks/main.yml`)** pour que tu voies comment il déploie Nova avec Docker ?

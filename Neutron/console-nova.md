@@ -1,7 +1,3 @@
-Très bien 👌 je vais te donner un **guide complet pas-à-pas** pour mettre en place la console (VNC + Serial) dans OpenStack avec **Kolla-Ansible**, jusqu’à pouvoir entrer dans ta VM sans SSH.
-
----
-
 # 🚀 Étapes pour activer et utiliser la console dans OpenStack
 
 ---
@@ -147,6 +143,3 @@ sudo docker exec -it nova_libvirt virsh console <ID_VM>
 6. Accéder via Horizon (Console) ou `openstack console url show`.
 7. Debug possible avec `virsh console`.
 
----
-
-👉 Veux-tu que je t’écrive aussi le **checklist rapide de debug** (commandes à lancer si la console reste grise dans Horizon) ?

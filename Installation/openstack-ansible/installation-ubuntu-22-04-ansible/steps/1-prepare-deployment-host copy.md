@@ -1,10 +1,3 @@
-Très bien 👌, je vais t’expliquer **Prepare the target hosts** pour **OpenStack-Ansible** comme si tu étais en train de préparer ton propre lab VirtualBox/VMs.
-
-L’idée : tu vas préparer chaque **target host** (contrôleur, compute, storage) pour qu’Ansible puisse ensuite déployer OpenStack dessus.
-Voilà ce que chaque section veut dire 👉
-
----
-
 # 🔹 1. Installer le système d’exploitation
 
 * Choisis un OS supporté :
@@ -161,18 +154,4 @@ network:
   → fournit DHCP/NAT aux conteneurs (sortie Internet).
 * Tu n’as rien à faire, OSA le gère.
 
----
-
-✅ **En résumé, préparer un target host c’est :**
-
-1. Installer un OS supporté (Ubuntu conseillé).
-2. Mise à jour + installation paquets (bridge-utils, vlan, lvm2, openssh, etc.).
-3. Corriger `/etc/hosts` et locale.
-4. Installer & tester les clés SSH (deployment ↔ target).
-5. Configurer LVM (optionnel pour Cinder / LXC).
-6. Créer les bridges réseaux (`br-mgmt`, `br-vxlan`, `br-ex`, `br-storage`, `br-vlan`).
-
----
-
-👉 Veux-tu que je t’écrive un **fichier Netplan complet clé en main pour Ubuntu 22.04 target host** (avec toutes les interfaces br-mgmt, br-vxlan, br-ex, br-storage, br-vlan) comme modèle ?
 

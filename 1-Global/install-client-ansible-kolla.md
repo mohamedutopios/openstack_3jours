@@ -1,10 +1,3 @@
-Très bon réflexe 👌
-Si tu veux rester sur **Ubuntu 18.04 (Bionic, Python 3.6.9)**, tu ne peux pas utiliser les dernières versions de Kolla-Ansible (**Epoxy 2025.1**) car elles exigent **Python ≥ 3.8 + Ansible ≥ 2.13**.
-
-👉 La solution est donc de déployer **une version plus ancienne d’OpenStack via Kolla-Ansible**, qui est **compatible Python 3.6 et Ansible 2.9/2.11**.
-
----
-
 # 🟢 Compatibilité OpenStack / Ubuntu 18.04
 
 * Ubuntu 18.04 est officiellement supporté jusqu’à **Victoria (2020.2)** et partiellement **Wallaby (2021.1)**.
@@ -77,6 +70,3 @@ kolla-ansible --version
   pip install "kolla-ansible==11.*"
   ```
 
----
-
-👉 Veux-tu que je te prépare un **pas-à-pas complet** pour déployer OpenStack Victoria avec Kolla-Ansible sur Ubuntu 18.04 (AIO), y compris le `globals.yml` et le `all-in-one` adaptés ?

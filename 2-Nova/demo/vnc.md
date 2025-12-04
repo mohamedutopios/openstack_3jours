@@ -1,6 +1,3 @@
-Très bonne question ⚡!
-Pour te donner un **vrai exemple utile et réaliste** de modification Nova, je vais prendre un cas courant en lab et en prod :
-
 👉 **Activer la console VNC pour accéder à tes VMs via Horizon**
 
 ---
@@ -95,8 +92,4 @@ openstack console url show test-vm
 
 En ouvrant l’URL → tu accèdes à la console.
 
----
 
-👉 Ça, c’est un **exemple concret et très utile** de modification Nova.
-
-Veux-tu que je t’en donne un deuxième, orienté **optimisation des ressources** (ex : limiter la surallocation CPU/RAM pour éviter que les compute soient surchargés) ?

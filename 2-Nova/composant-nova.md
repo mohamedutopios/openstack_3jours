@@ -1,10 +1,3 @@
-Très bonne question Mohamed 👌
-Nova est le **service de calcul d’OpenStack** : c’est lui qui orchestre la création, le cycle de vie et l’administration des machines virtuelles (instances).
-
-Je vais t’expliquer de manière détaillée :
-
----
-
 # 🔎 Vue d’ensemble
 
 * **Nom complet** : OpenStack Compute (code = Nova)

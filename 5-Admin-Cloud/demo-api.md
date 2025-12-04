@@ -1,7 +1,3 @@
-Parfait 👍 tu veux une **démo très concrète** et variée pour illustrer que tout ce qu’on fait dans Horizon correspond en réalité à des appels **API REST** derrière. Voilà une série d’exemples que tu peux utiliser en live ou en TP :
-
----
-
 # 🚀 Démo 2 : Automatisation avec l’API REST OpenStack
 
 👉 **Message clé** : *L’API REST est la base → Horizon, CLI, SDK, Ansible, Terraform… ne sont que des clients.*
@@ -141,18 +137,4 @@ curl -s \
   http://9.11.93.4:9292/v2/images | jq .
 ```
 
----
-
-## 🔑 Démonstration pédagogique
-
-* **Clic Horizon = POST/GET/DELETE JSON sur API REST**
-* **Horizon est juste un client web**
-* **OpenStack Client CLI** (`openstack server list`) → fait les mêmes requêtes API.
-* **SDK (Python, Ansible, Terraform)** → pareil, mais abstrait en code.
-
----
-
-👉 Résumé **à projeter / répéter** :
-**Horizon, CLI, SDK → façade utilisateur**
-**API REST → cœur des opérations**
 

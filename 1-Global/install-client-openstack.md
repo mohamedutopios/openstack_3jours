@@ -1,8 +1,3 @@
-Parfait 👍, ça explique pourquoi tu n’arrives pas encore à lister tes services :
-👉 la **CLI OpenStack (`openstack`) n’est pas installée sur ta VM**.
-
----
-
 # 🟢 1. Installer le client OpenStack
 
 Sous Ubuntu (22.04/24.04), la bonne commande est :
@@ -83,6 +78,4 @@ openstack server list
    openstack network agent list
    ```
 
----
 
-👉 Veux-tu que je te prépare une **checklist de commandes essentielles** (post-déploiement Kolla) pour tester que tous tes services sont bien opérationnels ?

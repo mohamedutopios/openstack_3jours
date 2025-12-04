@@ -1,11 +1,3 @@
-Parfait 👍 je vais te donner le **workflow complet en commandes `openstack`** pour :
-
-1. Créer une VM.
-2. Créer un volume NFS.
-3. Attacher ce volume à la VM.
-
----
-
 ## 🚀 Étapes
 
 ### 1. Créer une VM

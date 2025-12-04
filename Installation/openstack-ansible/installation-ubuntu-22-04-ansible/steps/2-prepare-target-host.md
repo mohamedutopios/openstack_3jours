@@ -1,10 +1,3 @@
-Très bonne question 👌
-Le passage que tu cites de la doc OpenStack-Ansible décrit **comment préparer le déploiement d’OpenStack** avec Ansible, en distinguant les environnements de prod et de test, et en détaillant la configuration du système d’exploitation du *deployment host* (ou cible si tu mutualises).
-
-Je vais te décortiquer tout ça étape par étape 👇
-
----
-
 ## 🔹 1. Déploiement en production vs test
 
 * **Production**
@@ -179,6 +172,4 @@ Principe :
 5. Cloner OSA et lancer `bootstrap-ansible.sh`.
 6. (Optionnel) Docker pour test rapide.
 
----
 
-Veux-tu que je t’écrive un **script d’installation automatisé** pour un **deployment host Ubuntu 22.04 sur VirtualBox** (mise à jour + paquets + SSH + git clone + bootstrap) ?

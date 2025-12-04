@@ -1,8 +1,3 @@
-Parfait 👍 — attaquons le concret : **comment mettre en œuvre et configurer Nova** dans un déploiement OpenStack (ex. lab VirtualBox / Ubuntu 22.04).
-Je vais détailler les **pré-requis**, l’**installation**, la **configuration fichier `nova.conf`**, l’**enregistrement des cells**, et la **validation**.
-
----
-
 # 1) Pré-requis
 
 * OS supporté : Ubuntu 22.04 LTS (ou Rocky/Alma 9, Debian 12).
@@ -215,6 +210,3 @@ nova-status upgrade check
 * **Server Groups** : affinité/anti-affinité.
 * **Console** : noVNC activé ([http://controller:6080](http://controller:6080)).
 
----
-
-👉 Veux-tu que je te fasse un **TP complet Nova** (création d’un flavor, lancement d’une VM avec réseau Neutron + Floating IP, attachement d’un volume Cinder, connexion via console) pour que tu aies une démo prête à exécuter ?

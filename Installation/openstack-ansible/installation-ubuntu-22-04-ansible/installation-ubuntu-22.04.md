@@ -1,9 +1,3 @@
-Parfait 👌
-On va adapter ce **lab OSA AIO** pour ton contexte **VM Ubuntu 22.04 dans VirtualBox**.
-La grande différence par rapport à un provider cloud en ligne : **dans VirtualBox tu as la main sur les cartes réseau** → donc on peut être plus souple.
-
----
-
 # 🔹 Vue d’ensemble : Ubuntu 22.04 + VirtualBox
 
 * Ta VM Ubuntu 22.04 aura **2 cartes réseau** :
@@ -255,14 +249,4 @@ echo "Floating IP = $FIP"
 Accède depuis ton PC :
 👉 `http://192.168.56.10/horizon`
 
----
 
-✅ Différence avec le lab “provider cloud” :
-
-* Ici, `br-ex` est relié à `enp0s8` (Host-only VirtualBox).
-* Les Floating IP OpenStack (`192.168.56.100-200`) sont **réellement routées** dans ton réseau Host-only.
-* Tu peux joindre directement tes VMs depuis ton PC (pas besoin de DNAT manuel).
-
----
-
-Veux-tu que je te génère un **schéma ASCII complet** montrant les cartes VirtualBox → bridges (`br-ex`, `br-mgmt`, `br-vxlan`) → VMs OpenStack, pour bien visualiser ce lab VirtualBox ?

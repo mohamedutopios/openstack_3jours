@@ -1,8 +1,3 @@
-Parfait Mohamed 👌 tu as partagé un schéma très intéressant qui illustre bien comment **Nova (Compute)** fonctionne dans le plan utilisateur d’OpenStack.
-Je vais te détailler chaque partie de cette image et expliquer comment tout s’articule.
-
----
-
 # 🖼️ **Analyse de l’image : Compute Hosts in User Plane**
 
 ## 🔶 Bloc de gauche : Services OpenStack de base
@@ -111,16 +106,4 @@ Je vais te détailler chaque partie de cette image et expliquer comment tout s�
 
 3. Le résultat (VM, conteneur ou bare metal) tourne sur un compute host approprié.
 
----
 
-# 📌 Résumé pédagogique
-
-Ce schéma montre que Nova est **pluggable** :
-
-* Il orchestre du compute **hétérogène** → VM (KVM, VMware), **Bare metal** (Ironic), **Containers** (Zun).
-* Tous passent par Nova API & Scheduler, qui choisit le bon “backend”.
-* Les autres services (Keystone, Neutron, Glance, Cinder) sont toujours sollicités pour auth, réseau, images et stockage.
-
----
-
-👉 Veux-tu que je te fasse un **scénario complet pas à pas** (par ex. “je crée une VM KVM”, “je crée un conteneur avec Zun”, “je crée un bare metal avec Ironic”) pour illustrer les 3 parcours possibles dans ce schéma ?

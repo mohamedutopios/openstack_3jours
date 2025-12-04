@@ -1,8 +1,3 @@
-Parfait 👍 on va repartir proprement et **sans gateway4 sur br-ex** (pour éviter les erreurs de routage).
-Voici un **Vagrantfile testé et corrigé** qui prépare Ubuntu 22.04 pour OSA, avec toutes les étapes pour que ça marche dans VirtualBox.
-
----
-
 # 📝 Vagrantfile complet (Ubuntu 22.04 + Netplan OSA)
 
 Crée un fichier `Vagrantfile` dans un dossier vide avec ce contenu :
@@ -164,20 +159,3 @@ Dans la VM (`vagrant ssh`) :
    ping 192.168.56.10
    ssh vagrant@192.168.56.10
    ```
-
----
-
-# ✅ Résumé
-
-* **Carte NAT (`enp0s3`)** → Internet (gateway `10.0.2.2`)
-* **Carte Host-only (`enp0s8` → `br-ex`)** → Horizon / accès depuis ton PC (`192.168.56.10`)
-* **Pas de gateway sur br-ex** → pas de conflit de routage
-* Bridges internes `br-mgmt` et `br-vxlan` prêts pour OSA
-
----
-
-👉 Veux-tu que je t’ajoute aussi un **schéma ASCII** qui montre clairement :
-
-* NAT → enp0s3 → Internet
-* Host-only → enp0s8 → br-ex → ton PC
-* br-mgmt et br-vxlan internes à la VM

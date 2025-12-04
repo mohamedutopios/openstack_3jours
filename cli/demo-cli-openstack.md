@@ -1,8 +1,3 @@
-Parfait 👍 tu veux une **série de commandes OpenStack CLI** pour gérer les ressources principales (réseaux, VM, volumes, images, sécurité).
-Je vais te donner une **boîte à outils complète** : les commandes de base + quelques options utiles, avec une explication rapide à chaque fois.
-
----
-
 # 🚀 Commandes OpenStack CLI (gestion des ressources)
 
 ---
@@ -186,19 +181,5 @@ openstack stack create -t mytemplate.yaml mystack
 openstack stack delete mystack
 ```
 
----
-
-# ✅ Résumé
-
-Avec ça tu peux gérer :
-
-* **Images** (Glance)
-* **Flavors** (Nova)
-* **Réseaux, subnets, routeurs** (Neutron)
-* **Security groups & règles**
-* **VM** (lifecycle complet)
-* **Volumes** (Cinder)
-* **Floating IP**
-* **Stacks** (Heat)
 
 

@@ -1,8 +1,3 @@
-Parfait 👍 tu veux une **démonstration complète, concrète et riche** autour des **switchs virtuels avec Open vSwitch (OVS)** dans OpenStack.
-Je vais te construire un **TP étape par étape** que tu pourrais refaire dans ton lab AIO Kolla ou sur une VM Ubuntu avec OVS seul.
-
----
-
 # 🚀 Démo complète : Switchs virtuels avec OVS
 
 ---

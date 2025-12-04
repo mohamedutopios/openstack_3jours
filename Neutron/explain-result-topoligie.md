@@ -1,8 +1,3 @@
-Super 👍 tu viens d’afficher la **topologie Open vSwitch (OVS)** de ton nœud OpenStack.
-Décryptons ton `ovs-vsctl show` morceau par morceau.
-
----
-
 # 🧩 1. Manager et contrôleurs
 
 ```
@@ -101,10 +96,4 @@ Dans ton `ovs-vsctl show` :
 
 👉 Tu as donc sous les yeux la **plomberie complète** entre tes VM, les routeurs Neutron et le monde extérieur.
 
----
 
-Veux-tu que je te prépare un **TP pas-à-pas** :
-
-1. Créer une VM → retrouver son port `tap*` dans `br-int`.
-2. Créer un routeur Neutron → voir les ports `qr-*` et `qg-*` apparaître.
-3. Créer un réseau externe → tracer le chemin des paquets jusqu’à `enp0s9`.

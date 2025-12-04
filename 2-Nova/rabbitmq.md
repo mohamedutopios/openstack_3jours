@@ -1,9 +1,3 @@
-Très bonne question Mohamed 👌
-**RabbitMQ** est une brique absolument centrale dans OpenStack, et notamment dans **Nova**.
-Voyons en détail son rôle :
-
----
-
 # 🐇 **RabbitMQ dans OpenStack**
 
 ## 🔎 Rôle général
@@ -92,6 +86,4 @@ transport_url = rabbit://openstack:RABBIT_PASS@controller:5672/
 * Assure **asynchronisme, fiabilité, scalabilité**.
 * Sans RabbitMQ, **les VM ne se lancent pas** → Nova ne peut pas fonctionner.
 
----
 
-👉 Veux-tu que je te prépare un **schéma clair (ASCII ou graphique)** montrant comment un message “Créer VM” circule dans RabbitMQ de `nova-api` jusqu’au `nova-compute` ?

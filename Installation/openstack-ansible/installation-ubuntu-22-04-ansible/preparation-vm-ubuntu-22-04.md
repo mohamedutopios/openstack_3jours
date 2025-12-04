@@ -1,8 +1,3 @@
-Très bonne question 👍
-Avant même d’attaquer l’installation d’OpenStack-Ansible (OSA) dans VirtualBox, il faut bien préparer **ta VM Ubuntu 22.04** pour éviter les mauvaises surprises.
-
----
-
 # 🔹 1. Paramètres VirtualBox
 
 ### 📌 Ressources VM
@@ -145,7 +140,3 @@ Ta VM Ubuntu 22.04 VirtualBox doit être préparée comme suit **avant d’insta
 * **Carte 2 = Host-only (statique)** → `br-ex = 192.168.56.10`.
 * **Bridges internes** `br-mgmt` et `br-vxlan` créés via Netplan.
 * Vérifier Internet + connectivité Host-only.
-
----
-
-👉 Veux-tu que je te prépare aussi un **schéma ASCII** qui montre les cartes VirtualBox (NAT + Host-only), leur mapping vers `enp0s3`/`enp0s8`, et comment elles se connectent à `br-ex`, `br-mgmt`, `br-vxlan` + VMs OpenStack ?

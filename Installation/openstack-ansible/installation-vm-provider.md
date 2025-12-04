@@ -1,10 +1,3 @@
-Parfait — on part sur un **déploiement OpenStack-Ansible (OSA) AIO “spécial provider cloud”** où **tu ne touches pas `enp3s0`** (ta carte publique), pour **éviter toute coupure** et **contourner l’anti-spoofing**.
-Principe : on laisse `enp3s0` tel quel ; on crée des réseaux **internes OSA** (gestion + overlay) et un **pseudo “externe”** isolé (pour les Floating IP), puis on **NAT** vers Internet via l’hôte.
-
-> Références utiles : Quickstart AIO, archi réseau & OVN/OVS (défaut en 2025.1 Epoxy) et “single-NIC” supporté pour non-prod. ([docs.openstack.org][1])
-
----
-
 # ✅ Vue d’ensemble (sécurisée pour VM chez un provider)
 
 * **On garde `enp3s0` avec l’IP publique** (pas de bridge, pas de changement Netplan dessus).
@@ -382,10 +375,3 @@ Ajoute tes règles DNAT dans `/etc/nftables.conf`, section `table ip nat { chain
 sudo systemctl reload nftables
 ```
 
----
-
-Si tu veux, je peux te **générer les trois fichiers prêts à coller** (Netplan interne, `openstack_user_config.yml`, `user_variables.yml`) **remplis avec ton IP publique exacte** — dis-moi juste l’IP (v4) et je te mets tout au propre.
-
-[1]: https://docs.openstack.org/openstack-ansible/latest/user/aio/quickstart.html?utm_source=chatgpt.com "Quickstart: AIO — openstack-ansible 31.1.0.dev241 ..."
-[2]: https://docs.openstack.org/openstack-ansible-os_neutron/latest/app-ovn.html?utm_source=chatgpt.com "Default Scenario - Open Virtual Network (OVN)"
-[3]: https://releases.openstack.org/?utm_source=chatgpt.com "OpenStack Releases: OpenStack Releases"

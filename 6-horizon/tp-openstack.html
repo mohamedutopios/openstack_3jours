@@ -1,0 +1,33 @@
+
+		<head>
+			<style type="text/css" media="screen">
+				body,html{font-family:var(--markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", system-ui, "Ubuntu", "Droid Sans", sans-serif);font-size:var(--markdown-font-size,14px);padding:0 26px;line-height:var(--markdown-line-height,22px);word-wrap:break-word}body{padding-top:1em}h1,h2,h3,h4,h5,h6,ol,p,pre,ul{margin-top:0}h2,h3,h4,h5,h6{font-weight:400;margin-bottom:.2em}img{max-width:100%;max-height:100%}a{text-decoration:none}a:hover{text-decoration:underline}a:focus,input:focus,select:focus,textarea:focus{outline:1px solid -webkit-focus-ring-color;outline-offset:-1px}p{margin-bottom:.7em}ol,ul{margin-bottom:.7em}hr{border:0;height:2px;border-bottom:2px solid}h1{padding-bottom:.3em;line-height:1.2;border-bottom-width:1px;border-bottom-style:solid;font-weight:400}table{border-collapse:collapse}th{text-align:left;border-bottom:1px solid}td,th{padding:5px 10px}table>tbody>tr+tr>td{border-top:1px solid}blockquote{margin:0 7px 0 5px;padding:0 16px 0 10px;border-left-width:5px;border-left-style:solid}code{font-family:var(--vscode-editor-font-family, "SF Mono", Monaco, Menlo, Consolas, "Ubuntu Mono", "Liberation Mono", "DejaVu Sans Mono", "Courier New", monospace);font-size:1em;line-height:1.357em}body.wordWrap pre{white-space:pre-wrap}pre.hljs code>div,pre:not(.hljs){padding:16px;border-radius:3px;overflow:auto}pre code{color:var(--vscode-editor-foreground);tab-size:4}
+			</style>
+		</head>
+		<body>
+			<h2 id="tp-openstack">TP Openstack</h2>
+<h3 id="les-opérations-à-réaliser-">Les opérations à réaliser :</h3>
+<ul>
+<li>Vous allez créer un nouveau groupe : GroupeDev. </li>
+<li>Ce groupe aura les droits reader sur le projet que vous allez &quot;Reader&quot;</li>
+<li>Vous allez créer 2 utilisateurs : Thomas et Marc.</li>
+<li>Vous allez créer un projet : web-app.</li>
+<li>Marc appartient au groupe GroupeDev. Il faudra vérifier que Marc dispose uniquement des droits auquel il a le droit pour ce projet.</li>
+<li>Dans le projet web-app, vous allez créer les éléments suivants : <ul>
+<li>Vous allez créer un routeur &quot;routeur-dev&quot;</li>
+<li>Vous allez créer 2 réseaux : reseau-public et un reseau-private. Vous choisirez les plages IP que vous jugerez pertinents pour les sous-réseaux (1 sous-reseau par réseau)</li>
+<li>Vous aurez besoin d&#39;une image ubuntu 18.04 et une 22.04.</li>
+<li>Un Gabarit pour les 2 vm -&gt; cpu : 2, ram : 2048 et 10GO.</li>
+<li>Vous aurez besoin de 2 VM : vm1 avec l&#39;image 18.04 et vm2 22.04.</li>
+<li>Chaque VM aura son propre groupe de sécurité.</li>
+<li>1 seule IP flottante sera nécessaire pour l&#39;ensemble du projet.</li>
+<li>Vous aller déployer le projet suivant : La partie front-end dans la vm1 du reseau-public : <a href="https://github.com/mohamedutopios/web-blog.git">https://github.com/mohamedutopios/web-blog.git</a> dans un serveur nginx (avec ou sans container).</li>
+<li>Vous aller déployer l&#39;autre projet : La partie back-end dans la vm2 du reseau-private : <a href="https://github.com/mohamedutopios/api-express-posts.git">https://github.com/mohamedutopios/api-express-posts.git</a> directement dans le serveur (avec ou sans container).</li>
+<li>Sur la vm2, vous aller essayer d&#39;installer un certain nombe d&#39;éléments pendant phase de création de la vm grâce </li>
+<li>Les 2 projets doivent communiquer entre eux pour faire fonctionner l&#39;application.</li>
+<li>Vous vous connecterez sur votre machine hôte sur le bon port pour afficher la partie front-end du projet.</li>
+</ul>
+</li>
+</ul>
+
+		</body>

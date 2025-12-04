@@ -1,9 +1,3 @@
-Parfait 👌 tu veux un **scénario concret avec 2 VM dans 2 réseaux différents**, reliées par un **routeur Neutron (L3 agent)**, **sans SSH** (uniquement via la **console Horizon/NoVNC ou série**).
-
-Voici un **TP complet étape par étape**.
-
----
-
 # 🚀 Scénario : 2 VM dans 2 réseaux privés, reliées par un routeur virtuel
 
 ---
@@ -118,14 +112,3 @@ ping 10.30.0.5
 ```
 
 ---
-
-# ✅ Résumé
-
-* Tu as **2 VM isolées sur 2 réseaux privés distincts**.
-* Un **routeur Neutron** route entre `net-a` et `net-b`.
-* Tu testes la connectivité **depuis la console VM** (NoVNC ou série), **sans SSH**.
-* Côté infra → tu vois les ports `tap*` et `qr-*` dans **OVS (`br-int`)** et les interfaces dans le namespace `qrouter`.
-
----
-
-👉 Veux-tu que je t’écrive ce scénario en **version TP pédagogique complet** (énoncé + corrigé + commandes d’observation côté OVS + namespace) comme si c’était pour une classe ?

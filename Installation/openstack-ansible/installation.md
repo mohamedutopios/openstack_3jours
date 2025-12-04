@@ -1,8 +1,3 @@
-Parfait — tu as déjà une VM « en ligne » avec une IP publique statique sur `enp3s0`.
-Voici **toutes les étapes OpenStack-Ansible (OSA) adaptées à TON réseau**, avec **le “pourquoi” de chaque phase**. J’utilise la branche **2025.1 (Epoxy)** — c’est la série actuelle d’OSA et elle **supporte Ubuntu 24.04** en déploiement “source” ; OSA utilise **OVN (ml2.ovn)** par défaut depuis Antelope/Zed (LinuxBridge n’est plus supporté en 2025.1). ([docs.openstack.org][1])
-
----
-
 # 0) Vue d’ensemble (ce que l’on déploie)
 
 * **Type** : All-in-One (AIO) sur une seule VM (pour POC/lab).
@@ -355,29 +350,5 @@ ip r
 
 * OVN ne crée pas d’“agents Neutron” classiques (LinuxBridge/OVS) → on vérifie **ovn-controller/northd** et la **bridge-mapping** `physnet1:br-ex`. ([docs.openstack.org][4])
 
----
 
-## Notes & choix de conception (pourquoi on fait cela)
 
-* **OVN par défaut** : plus moderne, stateless, remplaçant LinuxBridge/agents OVS. En **2025.1**, LinuxBridge est retiré. ([docs.openstack.org][4])
-* **br-ex (OVS) connecté à enp3s0** : indispensable pour que le **gateway chassis OVN** fasse le NAT et publie les Floating IP. (On met l’IP publique **sur br-ex**, pas sur `enp3s0`.) ([docs.openvswitch.org][6])
-* **Single-NIC** supporté : OSA documente le déploiement avec une seule interface (non-prod), ce qui est notre cas ici. ([docs.openstack.org][3])
-* **Tag/branche** : le **Quickstart AIO** recommande d’utiliser un **tag** de la série visée pour la stabilité. ([docs.openstack.org][2])
-* **Ubuntu 24.04 OK** pour **2025.1** : matrice de compatibilité OSA. ([docs.openstack.org][1])
-
----
-
-Si tu veux, je peux te générer **les fichiers prêts à copier-coller** suivants :
-
-* `/etc/netplan/01-osa.yaml` (tel qu’au-dessus)
-* `/etc/openstack_deploy/openstack_user_config.yml`
-* `/etc/openstack_deploy/user_variables.yml`
-
-…ou bien ajuster le plan si tu **veux absolument attribuer des IP publiques directes aux VMs** (possible seulement si ton amont accepte le pontage/MACs supplémentaires).
-
-[1]: https://docs.openstack.org/openstack-ansible/latest/admin/upgrades/compatibility-matrix.html "Compatibility Matrix — openstack-ansible 31.1.0.dev251 documentation"
-[2]: https://docs.openstack.org/openstack-ansible/latest/user/aio/quickstart.html "Quickstart: AIO — openstack-ansible 31.1.0.dev251 documentation"
-[3]: https://docs.openstack.org/openstack-ansible/latest/user/network-arch/example.html "Network architectures — openstack-ansible 31.1.0.dev251 documentation"
-[4]: https://docs.openstack.org/openstack-ansible-os_neutron/latest/app-ovn.html "Default Scenario - Open Virtual Network (OVN) — OpenStack-Ansible Neutron 18.1.0.dev704 documentation"
-[5]: https://netplan.readthedocs.io/en/latest/netplan-yaml/?utm_source=chatgpt.com "YAML configuration - Netplan documentation"
-[6]: https://docs.openvswitch.org/en/latest/faq/configuration/?utm_source=chatgpt.com "Basic Configuration"

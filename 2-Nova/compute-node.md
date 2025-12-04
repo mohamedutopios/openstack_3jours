@@ -1,8 +1,3 @@
-Excellente question Mohamed 👌
-Les **compute nodes** sont un élément clé d’OpenStack Nova, voyons ça en détail :
-
----
-
 # 🖥️ **Compute nodes : définition**
 
 * Un **compute node** est une **machine (physique ou virtuelle)** qui héberge les **instances (VMs)** dans un cloud OpenStack.

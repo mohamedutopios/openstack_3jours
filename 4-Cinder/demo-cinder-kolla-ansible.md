@@ -1,7 +1,3 @@
-Parfait 👍 je vais te donner un **pas-à-pas clair pour activer Cinder avec Kolla-Ansible** dans ton lab (VM VirtualBox). On part du principe que ton **OpenStack de base (Nova, Keystone, Neutron, etc.) tourne déjà**.
-
----
-
 # 🚀 Étapes pour mettre en place **Cinder** avec Kolla-Ansible
 
 ## 1. Ajouter un disque pour Cinder
@@ -105,11 +101,3 @@ openstack server add volume <ID_VM> test-volume
 * Connecte-toi à Horizon.
 * Menu **Volumes → Volumes** → tu dois voir `test-volume`.
 * Tu peux l’attacher/détacher depuis l’interface.
-
----
-
-✅ Et voilà → Cinder est fonctionnel. Tu peux maintenant créer des volumes block storage et les attacher à tes VMs.
-
----
-
-👉 Veux-tu que je t’écrive le **globals.yml minimal complet** (avec Keystone, Nova, Neutron, Horizon déjà activés + Cinder ajouté) pour que tu puisses comparer directement avec ton fichier ?

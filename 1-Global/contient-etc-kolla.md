@@ -1,13 +1,3 @@
-Excellent 👍 tu es dans `/etc/kolla` après un déploiement **Kolla-Ansible**.
-La liste que tu vois mélange :
-
-* **Fichiers générés par Kolla-Ansible** (`globals.yml`, `passwords.yml`, `admin-openrc.sh`).
-* **Répertoires de configuration de services OpenStack** (nova, neutron, keystone, etc.), qui sont montés dans les conteneurs correspondants.
-
-Je vais te détailler **chacun de ces fichiers/répertoires** 👇
-
----
-
 # 📂 Fichiers principaux
 
 ### `globals.yml`
@@ -94,13 +84,4 @@ Exemple : `/etc/kolla/nova-compute/nova.conf` → monté dans le conteneur `nova
 | `chrony/`                                    | NTP                                  |
 | `openvswitch-*`                              | Réseau virtuel (OVS)                 |
 
----
 
-👉 En gros :
-
-* **3 fichiers vitaux** pour toi → `globals.yml`, `passwords.yml`, `admin-openrc.sh`.
-* **Tous les dossiers** → contiennent les *overrides* des configs de services. Tu n’as pas à tout modifier : tu touches seulement quand tu veux personnaliser un service (ex : `nova.conf`, `neutron.conf`).
-
----
-
-Veux-tu que je te fasse un **schéma visuel (type diagramme)** montrant comment ces fichiers/répertoires interagissent avec les conteneurs OpenStack ?

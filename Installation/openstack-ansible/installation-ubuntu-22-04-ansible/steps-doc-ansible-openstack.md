@@ -1,7 +1,3 @@
-Parfait 👍 Je vais t’expliquer chacune de ces étapes de la documentation **OpenStack-Ansible (OSA)** dans l’ordre, avec le **but** et ce qu’il faut faire concrètement.
-
----
-
 ## 1. **Overview (Vue d’ensemble)**
 
 👉 Cette partie présente ce qu’est **OpenStack-Ansible** :
@@ -130,6 +126,4 @@ But : s’assurer que l’installation est **réussie et exploitable**.
 * **Install OpenStack** = lancer le déploiement.
 * **Verify** = tester que ça marche.
 
----
 
-Veux-tu que je te fasse un **tableau récapitulatif avec : Étape / Action / Commandes typiques** (prêt pour ton lab VirtualBox) ?

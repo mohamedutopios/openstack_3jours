@@ -1,7 +1,3 @@
-Yes 🎯 tu as trouvé un script clé : **`init-runonce`**.
-
----
-
 # 🔎 Rôle de `init-runonce`
 
 C’est un script fourni avec **Kolla-Ansible** (dans les exemples) pour :
@@ -100,14 +96,3 @@ openstack server create \
 ```
 
 👉 Tu auras une VM **connectée à demo-net** et routée vers Internet via `public1`.
-
----
-
-📌 Donc :
-
-* Oui, `init-runonce` est un **playbook shell d’exemple** pour initialiser rapidement un cloud démo avec Kolla-Ansible.
-* Il se base sur ton réseau **9.12.93.0/24 (enp0s9)** pour configurer le **provider network externe**.
-
----
-
-Veux-tu que je t’explique **comment modifier `init-runonce`** si tu veux un autre range de Floating IPs ou un autre réseau externe (par ex. sur enp0s8 à la place d’enp0s9) ?
